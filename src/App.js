@@ -1,9 +1,18 @@
-import './App.css';
+// React Bootstrap Imports
+import {Container} from "react-bootstrap";
+
+// Components Import
+import NavigationBar from "./components/navigationBar/navigationBar";
+
+// SASS Imports
+import './scss/App.scss';
 
 function App() {
-  return (
-      <h1>Hello World</h1>
-  );
+    return (
+        <Container>
+            <NavigationBar/>
+        </Container>
+    );
 }
 
 export default App;
