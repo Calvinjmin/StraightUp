@@ -1,0 +1,9 @@
+@import "./Colors";
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background-color: $background;
+}

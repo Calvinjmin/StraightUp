@@ -1,0 +1,21 @@
+@import "./Colors.scss";
+
+nav {
+  background-color: $secondary;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li, p, a {
+    display: inline-block;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+  }
+}
