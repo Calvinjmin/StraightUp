@@ -14,8 +14,8 @@ function NavigationBar() {
     return (
         <Navbar>
             <Nav className="container-fluid">
-                <NavbarBrand>
-                    <Link to="/">Straight Up</Link>
+                <NavbarBrand as={Link} to="/">
+                    Straight Up
                 </NavbarBrand>
                 <Nav className="ml-auto">
                     <ProfileDropdown/>

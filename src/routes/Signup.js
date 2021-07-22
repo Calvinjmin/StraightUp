@@ -16,23 +16,23 @@ function Signup() {
         <div>
             <h2>Create Account</h2>
             <Form>
-                <Form.Group className="mb-3" controlId="formFirstName">
+                <Form.Group className="mb-3">
                     <Form.Control type="text" placeholder="First Name"/>
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formLastName">
+                <Form.Group className="mb-3">
                     <Form.Control type="text" placeholder="Last Name"/>
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formEmail">
+                <Form.Group className="mb-3">
                     <Form.Control type="email" placeholder="Email Address"/>
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formUsername">
+                <Form.Group className="mb-3">
                     <Form.Control type="text" placeholder="Username"/>
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formPassword">
+                <Form.Group className="mb-3">
                     <Form.Control type={passwordShown ? "text" : "password"}
                                   placeholder="Password (Case Sensitive)"/>
                     <Form.Check type="checkbox" label="Show Password" onChange={togglePassword}/>

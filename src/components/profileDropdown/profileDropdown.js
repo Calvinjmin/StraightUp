@@ -9,8 +9,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function ProfileDropdown() {
     return (
         <NavDropdown id="collasible-nav-dropdown" title="Welcome">
-            <NavDropdown.Item>
-                <Link to="/Login">Login</Link>
+            <NavDropdown.Item as={Link} to="/Login">
+                Login
             </NavDropdown.Item>
         </NavDropdown>
     );
