@@ -23,7 +23,8 @@ function Signup() {
     };
 
     // Handle Submission for Creating Account Form
-    const createAccount = () => {
+    const createAccount = (event) => {
+        event.preventDefault();
         console.log(fieldInputs);
     }
 
