@@ -2,7 +2,7 @@
 import React from "react";
 
 // SASS Imports
-import "./scss/Home.scss";
+import "../scss/Home.scss";
 
 function Home() {
     return (
