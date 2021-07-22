@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/StraightUp/static/css/main.83d0160c.chunk.css",
-    "main.js": "/StraightUp/static/js/main.37d46568.chunk.js",
-    "main.js.map": "/StraightUp/static/js/main.37d46568.chunk.js.map",
+    "main.js": "/StraightUp/static/js/main.9e1ccef5.chunk.js",
+    "main.js.map": "/StraightUp/static/js/main.9e1ccef5.chunk.js.map",
     "runtime-main.js": "/StraightUp/static/js/runtime-main.f276eced.js",
     "runtime-main.js.map": "/StraightUp/static/js/runtime-main.f276eced.js.map",
     "static/css/2.4be38407.chunk.css": "/StraightUp/static/css/2.4be38407.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.4be38407.chunk.css",
     "static/js/2.f83fdafb.chunk.js",
     "static/css/main.83d0160c.chunk.css",
-    "static/js/main.37d46568.chunk.js"
+    "static/js/main.9e1ccef5.chunk.js"
   ]
 }
