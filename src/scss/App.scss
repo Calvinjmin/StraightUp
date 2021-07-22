@@ -1,8 +1,8 @@
-$primary: #586994;
-$seconday: #7D869C;
-$silver-chalice: #A2ABAB;
-$laurel-green: #B4C4AE;
-$background: #E5E8B6;
+@import "./Colors";
+
+html, body {
+  min-height: 100%;
+}
 
 body {
   background-color: $background;
