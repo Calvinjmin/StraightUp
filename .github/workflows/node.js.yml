@@ -35,4 +35,4 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: npm deploy
+      - run: npm run deploy
