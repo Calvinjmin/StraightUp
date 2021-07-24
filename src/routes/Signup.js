@@ -1,10 +1,11 @@
-// React Bootstrap Imports
+// React Imports
 import React from "react";
 import {Button, Form} from "react-bootstrap";
 
-// SASS Imports
+// Dynamo Functions
+import {create_user} from "../functions/dynamo/login_functions";
 
-function Signup() {
+function Signup({set_user}) {
     // React State - Tells if you should show password field
     const [passwordShown, setPasswordShown] = React.useState(false);
 
@@ -23,9 +24,19 @@ function Signup() {
     };
 
     // Handle Submission for Creating Account Form
-    const createAccount = (event) => {
+    const createAccount = async (event) => {
         event.preventDefault();
-        console.log(fieldInputs);
+        event.target.reset();
+
+        // Field Inputs - Must be sent to backend
+        try {
+            const user_information = await (create_user(fieldInputs));
+            if (user_information) {
+                set_user(user_information.data);
+            }
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     return (
