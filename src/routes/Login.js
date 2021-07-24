@@ -3,9 +3,10 @@ import React from "react";
 import {Button, Form} from "react-bootstrap";
 import {Link} from "react-router-dom";
 
-// SASS Imports
+// Dynamo Functions
+import {login} from "../functions/dynamo/login_functions";
 
-function Login() {
+function Login({set_user}) {
     // React State - Tells if you should show password field
     const [passwordShown, setPasswordShown] = React.useState(false);
 
@@ -21,12 +22,20 @@ function Login() {
     };
 
     // Handles Form Submission - FE to BE
-    const loginUser = (event) => {
+    const loginUser = async (event) => {
         event.preventDefault();
+        event.target.reset();
 
         // Field Inputs - Must be sent to backend
-        console.log(fieldInputs.username);
-        console.log(fieldInputs.password);
+        try {
+            const user_information = await (login(fieldInputs));
+            if (user_information) {
+                set_user(user_information.data);
+            }
+        }
+        catch (error) {
+            console.log(error);
+        }
     }
 
     return (
@@ -37,7 +46,7 @@ function Login() {
                               onChange={(e) => fieldInputs.username = e.target.value}
                 />
 
-                < Form.Group name="passwordGroup" className="mb-3">
+                <Form.Group name="passwordGroup" className="mb-3">
                     <Form.Control type={passwordShown ? "text" : "password"}
                                   id="formPassword" label="Password"
                                   placeholder="Password (Case Sensitive)"
@@ -46,9 +55,7 @@ function Login() {
                                 onChange={togglePassword}/>
                 </Form.Group>
 
-                <Button variant="primary" type="submit">
-                    Log In
-                </Button>
+                <Button value="Log In" type="submit">Log In</Button>
             </Form>
 
             <p>Do you not have an account? Click <Link to="/Signup"> here </Link> to signup.</p>

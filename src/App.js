@@ -11,18 +11,22 @@ import NavigationBar from "./components/navigationBar/navigationBar";
 // SASS Imports
 import './scss/App.scss';
 
+// Interface Imports
+import {inital_user} from "./interfaces/user";
+
 function App() {
+    const [user, set_user] = React.useState(inital_user);
     return (
         <Router>
             <div>
-                <NavigationBar/>
+                <NavigationBar user = {user}/>
             </div>
             <Switch>
                 <Route path="/Signup">
-                    <Signup/>
+                    <Signup set_user = {set_user} user = {user}/>
                 </Route>
                 <Route path="/Login">
-                    <Login/>
+                    <Login set_user = {set_user}/>
                 </Route>
                 <Route path="/">
                     <Home/>
