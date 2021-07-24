@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 //Components Imports
 import ProfileDropdown from "../dropdown/profileDropdown/profileDropdown";
 
-function NavigationBar( {user} ) {
+function NavigationBar( {user, set_user} ) {
     return (
         <Navbar>
             <Nav className="container-fluid">
@@ -18,7 +18,7 @@ function NavigationBar( {user} ) {
                     Straight Up
                 </NavbarBrand>
                 <Nav className="ml-auto">
-                    <ProfileDropdown user = {user}/>
+                    <ProfileDropdown user = {user} set_user={set_user}/>
                 </Nav>
             </Nav>
         </Navbar>

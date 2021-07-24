@@ -14,7 +14,7 @@ function Login({set_user}) {
     const fieldInputs = {
         username: "",
         password: "",
-    }
+    };
 
     // Toggle Method - Boolean
     const togglePassword = () => {
@@ -36,7 +36,7 @@ function Login({set_user}) {
         catch (error) {
             console.log(error);
         }
-    }
+    };
 
     return (
         <div>

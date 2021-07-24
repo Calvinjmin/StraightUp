@@ -1,4 +1,4 @@
-// React Bootstrap Imports
+// React Imports
 import React from "react";
 import {HashRouter as Router, Route, Switch} from "react-router-dom";
 
@@ -12,21 +12,21 @@ import NavigationBar from "./components/navigationBar/navigationBar";
 import './scss/App.scss';
 
 // Interface Imports
-import {inital_user} from "./interfaces/user";
+import {initial_user} from "./interfaces/user";
 
 function App() {
-    const [user, set_user] = React.useState(inital_user);
+    const [user, set_user] = React.useState(initial_user);
     return (
         <Router>
             <div>
-                <NavigationBar user = {user}/>
+                <NavigationBar user={user} set_user={set_user}/>
             </div>
             <Switch>
                 <Route path="/Signup">
-                    <Signup set_user = {set_user} user = {user}/>
+                    <Signup set_user={set_user}/>
                 </Route>
                 <Route path="/Login">
-                    <Login set_user = {set_user}/>
+                    <Login set_user={set_user}/>
                 </Route>
                 <Route path="/">
                     <Home/>

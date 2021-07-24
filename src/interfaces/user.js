@@ -7,7 +7,7 @@ export interface User_Information {
     password: string;
 }
 
-export const inital_user: User_Information = {
+export const initial_user: User_Information = {
     firstName: "",
     lastName: "",
     email: "",
