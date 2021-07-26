@@ -14,9 +14,12 @@ function NavigationBar( {user, set_user} ) {
     return (
         <Navbar>
             <Nav className="container-fluid">
-                <NavbarBrand as={Link} to="/">
+                <NavbarBrand as={Link} to="/" replace>
                     Straight Up
                 </NavbarBrand>
+                <Nav.Item>Feed</Nav.Item>
+                <Nav.Item>Map</Nav.Item>
+                <Nav.Item>Messages</Nav.Item>
                 <Nav className="ml-auto">
                     <ProfileDropdown user = {user} set_user={set_user}/>
                 </Nav>

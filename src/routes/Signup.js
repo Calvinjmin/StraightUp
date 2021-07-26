@@ -18,6 +18,11 @@ function Signup({set_user}) {
         password: "",
     }
 
+    // Getter Function for Form Inputs
+    const getFieldInputs = () => {
+        return fieldInputs;
+    }
+
     // Toggle Method - Boolean
     const togglePassword = () => {
         setPasswordShown(!passwordShown);
@@ -26,11 +31,12 @@ function Signup({set_user}) {
     // Handle Submission for Creating Account Form
     const createAccount = async (event) => {
         event.preventDefault();
+        const signUpData = await( getFieldInputs() );
         event.target.reset();
 
         // Field Inputs - Must be sent to backend
         try {
-            const user_information = await (create_user(fieldInputs));
+            const user_information = await (create_user(signUpData));
             if (user_information) {
                 set_user(user_information.data);
             }

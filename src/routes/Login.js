@@ -1,7 +1,8 @@
-// React Bootstrap Imports
+// React Imports
 import React from "react";
-import {Button, Form} from "react-bootstrap";
+import {useHistory} from "react-router";
 import {Link} from "react-router-dom";
+import {Button, Form} from "react-bootstrap";
 
 // Dynamo Functions
 import {login} from "../functions/dynamo/login_functions";
@@ -16,22 +17,32 @@ function Login({set_user}) {
         password: "",
     };
 
+    // Getter Function for Form Inputs
+    const getFieldInputs = () => {
+        return fieldInputs;
+    }
+
     // Toggle Method - Boolean
     const togglePassword = () => {
         setPasswordShown(!passwordShown);
     };
 
+    // History Function
+    const history = useHistory();
+
     // Handles Form Submission - FE to BE
     const loginUser = async (event) => {
         event.preventDefault();
+        const loginData = await( getFieldInputs() );
         event.target.reset();
 
         // Field Inputs - Must be sent to backend
         try {
-            const user_information = await (login(fieldInputs));
+            const user_information = await (login(loginData));
             if (user_information) {
                 set_user(user_information.data);
             }
+            history.push("/");
         }
         catch (error) {
             console.log(error);
