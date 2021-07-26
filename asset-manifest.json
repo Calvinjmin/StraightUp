@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/StraightUp/static/css/main.83d0160c.chunk.css",
-    "main.js": "/StraightUp/static/js/main.f4c26986.chunk.js",
-    "main.js.map": "/StraightUp/static/js/main.f4c26986.chunk.js.map",
+    "main.js": "/StraightUp/static/js/main.357935e9.chunk.js",
+    "main.js.map": "/StraightUp/static/js/main.357935e9.chunk.js.map",
     "runtime-main.js": "/StraightUp/static/js/runtime-main.bbf249ef.js",
     "runtime-main.js.map": "/StraightUp/static/js/runtime-main.bbf249ef.js.map",
     "static/css/2.4be38407.chunk.css": "/StraightUp/static/css/2.4be38407.chunk.css",
-    "static/js/2.cbbd3e39.chunk.js": "/StraightUp/static/js/2.cbbd3e39.chunk.js",
-    "static/js/2.cbbd3e39.chunk.js.map": "/StraightUp/static/js/2.cbbd3e39.chunk.js.map",
+    "static/js/2.d9feaf32.chunk.js": "/StraightUp/static/js/2.d9feaf32.chunk.js",
+    "static/js/2.d9feaf32.chunk.js.map": "/StraightUp/static/js/2.d9feaf32.chunk.js.map",
     "static/js/3.386099ab.chunk.js": "/StraightUp/static/js/3.386099ab.chunk.js",
     "static/js/3.386099ab.chunk.js.map": "/StraightUp/static/js/3.386099ab.chunk.js.map",
     "index.html": "/StraightUp/index.html",
     "static/css/2.4be38407.chunk.css.map": "/StraightUp/static/css/2.4be38407.chunk.css.map",
     "static/css/main.83d0160c.chunk.css.map": "/StraightUp/static/css/main.83d0160c.chunk.css.map",
-    "static/js/2.cbbd3e39.chunk.js.LICENSE.txt": "/StraightUp/static/js/2.cbbd3e39.chunk.js.LICENSE.txt"
+    "static/js/2.d9feaf32.chunk.js.LICENSE.txt": "/StraightUp/static/js/2.d9feaf32.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bbf249ef.js",
     "static/css/2.4be38407.chunk.css",
-    "static/js/2.cbbd3e39.chunk.js",
+    "static/js/2.d9feaf32.chunk.js",
     "static/css/main.83d0160c.chunk.css",
-    "static/js/main.f4c26986.chunk.js"
+    "static/js/main.357935e9.chunk.js"
   ]
 }
