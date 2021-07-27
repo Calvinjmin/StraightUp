@@ -5,6 +5,9 @@ import {Button, Form} from "react-bootstrap";
 // Dynamo Functions
 import {create_user} from "../functions/dynamo/login_functions";
 
+// Scss Import
+import "../scss/Signup.scss";
+
 function Signup({set_user}) {
     // React State - Tells if you should show password field
     const [passwordShown, setPasswordShown] = React.useState(false);
@@ -46,7 +49,7 @@ function Signup({set_user}) {
     }
 
     return (
-        <div>
+        <div className="Signup">
             <h2>Create Account</h2>
             <Form onSubmit={createAccount}>
                 <Form.Group className="mb-3">
