@@ -7,6 +7,9 @@ import {Button, Form} from "react-bootstrap";
 // Dynamo Functions
 import {login} from "../functions/dynamo/login_functions";
 
+// Scss Import
+import "../scss/Login.scss";
+
 function Login({set_user}) {
     // React State - Tells if you should show password field
     const [passwordShown, setPasswordShown] = React.useState(false);
@@ -50,12 +53,13 @@ function Login({set_user}) {
     };
 
     return (
-        <div>
+        <div className="Login">
             <h2>Log In</h2>
             <Form onSubmit={loginUser}>
-                <Form.Control type="text" id="formUsername" label="Username" placeholder="Username"
-                              onChange={(e) => fieldInputs.username = e.target.value}
-                />
+                <Form.Group name="usernameGroup" className="mb-3">
+                    <Form.Control type="text" id="formUsername" label="Username" placeholder="Username"
+                              onChange={(e) => fieldInputs.username = e.target.value}/>
+                </Form.Group>
 
                 <Form.Group name="passwordGroup" className="mb-3">
                     <Form.Control type={passwordShown ? "text" : "password"}
