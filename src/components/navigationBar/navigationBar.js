@@ -18,7 +18,7 @@ function NavigationBar( {user, set_user} ) {
                     Straight Up
                 </NavbarBrand>
                 <Nav.Item>Feed</Nav.Item>
-                <Nav.Item>Map</Nav.Item>
+                <Nav.Item as = {Link} to="/Map" replace>Map</Nav.Item>
                 <Nav.Item>Messages</Nav.Item>
                 <Nav className="ml-auto">
                     <ProfileDropdown user = {user} set_user={set_user}/>

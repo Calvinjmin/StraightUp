@@ -6,6 +6,7 @@ import {HashRouter as Router, Route, Switch} from "react-router-dom";
 import Home from "./routes/Home";
 import Login from "./routes/Login";
 import Signup from "./routes/Signup";
+import Map from "./routes/Map";
 import NavigationBar from "./components/navigationBar/navigationBar";
 
 // SASS Imports
@@ -27,6 +28,9 @@ function App() {
                 </Route>
                 <Route path="/Login">
                     <Login set_user={set_user}/>
+                </Route>
+                <Route path = "/Map">
+                    <Map />
                 </Route>
                 <Route path="/">
                     <Home/>
